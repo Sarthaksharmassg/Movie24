@@ -2,11 +2,11 @@ package com.example.movies24.movieList.data.movie
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-@Entity(tableName = "MovieEntity")
+@Entity
 data class MovieEntity(
     val adult: Boolean,
     val backdrop_path: String,
-    val genre_ids: String,
+    val genre_ids: String,   //SeachPT why is it srtring here and in response and movie in model its List<int>
     val original_language: String,
     val original_title: String,
     val overview: String,

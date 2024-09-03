@@ -17,7 +17,9 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.movies24.movieList.util.RatingBar
 //import com.example.movies24.movieList.vM.MovieViewModel
 import com.example.movies24.ui.theme.Movies24Theme
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
