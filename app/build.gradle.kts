@@ -99,10 +99,10 @@ dependencies {
 
     // optional - Paging 3 Integration
     implementation("androidx.room:room-paging:$room_version")
-    implementation("com.google.dagger:hilt-android:2.44")
-    kapt("com.google.dagger:hilt-android-compiler:2.44")
+    implementation("com.google.dagger:hilt-android:2.52")
+    kapt("com.google.dagger:hilt-android-compiler:2.52")
     implementation("androidx.hilt:hilt-navigation-fragment:1.0.0")
-
+    kapt("androidx.hilt:hilt-compiler:1.2.0")
     //hilt navigation
     implementation("androidx.hilt:hilt-navigation-compose:1.0.0")
 
