@@ -13,7 +13,9 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.ViewModelProvider
+import com.example.movies24.movieList.presentation.MovieListViewModel
 import com.example.movies24.movieList.util.RatingBar
 //import com.example.movies24.movieList.vM.MovieViewModel
 import com.example.movies24.ui.theme.Movies24Theme
@@ -33,6 +35,8 @@ class MainActivity : ComponentActivity() {
 //                        modifier = Modifier.padding(innerPadding)
 //                    )
                     //RatingBar()
+                    val movieListViewModel= hiltViewModel<MovieListViewModel>()    //todo Search HiltViewModel
+
                 }
             }
         }
