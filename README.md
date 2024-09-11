@@ -1,4 +1,4 @@
-Movies Castalogue App: 
+Movies Catalogue Application: 
 Functionalities and Features:
 1. MovieListScreen Top-Rated and Upcoming
 2. Movie Details
