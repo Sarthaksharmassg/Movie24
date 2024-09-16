@@ -2,6 +2,7 @@ package com.example.movies24.movieList.presentation
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.movies24.movieList.data.remote.MovieApi
 import com.example.movies24.movieList.domain.repository.MovieListRepository
 import com.example.movies24.movieList.util.Category
 import com.example.movies24.movieList.util.Resource
@@ -15,7 +16,8 @@ import javax.inject.Inject
 
 @HiltViewModel
 class MovieListViewModel @Inject constructor(
-    private val movieListRepository : MovieListRepository
+    private val movieListRepository : MovieListRepository,
+    private val movieApi: MovieApi
 ) : ViewModel(){
     private var _movieListState= MutableStateFlow(MovieListState())
     val movieListState= _movieListState.asStateFlow()
@@ -24,11 +26,11 @@ class MovieListViewModel @Inject constructor(
         getUpcomingMoviesList(false)
     }
 
-    private fun onEvent(event:MovieListUIEvent){
+    fun onEvent(event:MovieListUIEvent){
         when(event){
             MovieListUIEvent.Navigate ->{
-                _movieListState.update{
-                    it.copy(
+                _movieListState.update{      //Mutablestatefunction if current val not equal to next value then set taks a function as paramter
+                    it.copy(                //copy(): A function that is available on data classes in Kotlin. It allows you to create a new instance of the data class by copying the current instance (i.e., it) and changing only the properties you specify. All other properties will retain the values of the original instance.
                         isCurrentScreenTop_Rated = !movieListState.value.isCurrentScreenTop_Rated
                     )
                 }
@@ -47,7 +49,7 @@ class MovieListViewModel @Inject constructor(
         viewModelScope.launch {
             _movieListState.update{
                 it.copy(isLoading=true)
-            }
+            }    //todo SEARCH
             movieListRepository.getMovieListIsInRepo(
                 forceFetchFromRemote,
                 Category.TOP_RATED,
@@ -123,6 +125,15 @@ class MovieListViewModel @Inject constructor(
                 }
             }
         }
+    }
+
+
+    private fun test() {
+        viewModelScope.launch {
+            movieApi.getMovieListIsInRetrofitMovieApi("upcoming", 1) //DECLARED IN MOVIEAPI GET CALL
+
+        }
+
     }
 
 }
