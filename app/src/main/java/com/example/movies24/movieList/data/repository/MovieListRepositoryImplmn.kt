@@ -39,7 +39,7 @@ class MovieListRepositoryImplmn @Inject constructor(
                 return@flow
             }
             val movieListFromApi= try{
-                movieApi.getMovieListIsInRetrofitMovieApi(category, page)
+                movieApi.getMovieListIsInRetrofitMovieApi(category, page) //DECLARED IN MOVIEAPI GET CALL
             }
             catch(e:Exception){
                 e.printStackTrace()

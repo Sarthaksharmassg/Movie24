@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Movies24</string>
+    <string name="language">Language</string>
+    <string name="release_date">"Release Date: "</string>
 </resources>
