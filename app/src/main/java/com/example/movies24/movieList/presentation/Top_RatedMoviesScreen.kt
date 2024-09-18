@@ -44,7 +44,7 @@ fun Top_RatedMoviesScreen(
                 }
             }
         }
-        PullRefreshIndicator(refreshing = isRefrshing, state = )
+        //PullRefreshIndicator(refreshing = isRefrshing, state = )
         //TODO pullre freshIndicator()
         //todo
     }
