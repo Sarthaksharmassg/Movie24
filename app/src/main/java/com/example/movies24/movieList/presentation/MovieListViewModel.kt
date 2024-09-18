@@ -1,5 +1,6 @@
 package com.example.movies24.movieList.presentation
 
+import androidx.compose.runtime.collectAsState
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.movies24.movieList.data.remote.MovieApi
@@ -8,12 +9,13 @@ import com.example.movies24.movieList.util.Category
 import com.example.movies24.movieList.util.Resource
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import javax.inject.Inject
-
+import com.example.movies24.movieList.data.movie.MovieDao
 @HiltViewModel
 class MovieListViewModel @Inject constructor(
     private val movieListRepository : MovieListRepository,
@@ -21,7 +23,10 @@ class MovieListViewModel @Inject constructor(
 ) : ViewModel(){
     private var _movieListState= MutableStateFlow(MovieListState())
     val movieListState= _movieListState.asStateFlow()
+
+
     init{
+        refreshpull()
         getTop_RatedMovieList(false)
         getUpcomingMoviesList(false)
     }
@@ -134,6 +139,48 @@ class MovieListViewModel @Inject constructor(
 
         }
 
+    }
+
+    private val _isRefreshing= MutableStateFlow(false)
+    val isRefrshing:StateFlow<Boolean>
+        get()=_isRefreshing.asStateFlow()
+
+    fun refreshpull(){
+        viewModelScope.launch{
+        //var forcefetch: Boolean= true;
+            movieListRepository.getMovieListIsInRepo(
+                true,
+                Category.UPCOMING,
+                movieListState.value.upcomingMovieListPage
+            ).collectLatest {
+                    result->
+                when(result){
+                    is Resource.Error ->{
+                        _movieListState.update{
+                            it.copy(isLoading=false)
+                        }
+                    }
+
+                    is Resource.Success ->{
+                        result.data?.let{ upcomingList->
+                            _movieListState.update{
+                                it.copy(
+                                    upcomingMovieList =upcomingList.shuffled(),
+                                    upcomingMovieListPage =1
+                                )
+                            }
+
+                        }
+                    }
+                    is Resource.Loading ->{
+                        _movieListState.update{
+                            it.copy(isLoading=result.isLoading)
+                        }
+                    }
+                }
+            }
+            _isRefreshing.emit(false)
+        }
     }
 
 }

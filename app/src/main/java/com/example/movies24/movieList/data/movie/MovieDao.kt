@@ -14,4 +14,8 @@ interface MovieDao {
 
     @Query("Select * from MovieEntity where category=:category")
     suspend fun getMovieListByCategory(category:String):List<MovieEntity>
+
+    @Query("Delete from MovieEntity")
+    suspend fun dataGoesPoof()
+
 }

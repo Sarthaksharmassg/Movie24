@@ -7,6 +7,8 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
+import androidx.compose.material.ExperimentalMaterialApi
+import androidx.compose.material.pullrefresh.PullRefreshIndicator
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -16,6 +18,7 @@ import androidx.navigation.NavController
 import com.example.movies24.movieList.presentation.component.MovieItem
 import com.example.movies24.movieList.util.Category
 
+@OptIn(ExperimentalMaterialApi::class)
 @Composable
 fun Top_RatedMoviesScreen(
     movieListState: MovieListState,
@@ -41,5 +44,8 @@ fun Top_RatedMoviesScreen(
                 }
             }
         }
+        PullRefreshIndicator(refreshing = isRefrshing, state = )
+        //TODO pullre freshIndicator()
+        //todo
     }
 }
