@@ -1,0 +1,375 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.movies24"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="24"
+9        android:targetSdkVersion="34" />
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->/Users/sarthak.sharma/AndroidStudioProjects/Movies24/app/src/main/AndroidManifest.xml:4:5-66
+11-->/Users/sarthak.sharma/AndroidStudioProjects/Movies24/app/src/main/AndroidManifest.xml:4:22-64
+12    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+12-->/Users/sarthak.sharma/AndroidStudioProjects/Movies24/app/src/main/AndroidManifest.xml:5:5-78
+12-->/Users/sarthak.sharma/AndroidStudioProjects/Movies24/app/src/main/AndroidManifest.xml:5:22-76
+13    <uses-permission android:name="android.permission.WAKE_LOCK" />
+13-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:25:5-68
+13-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:25:22-65
+14    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+14-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:27:5-81
+14-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:27:22-78
+15    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+15-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:28:5-77
+15-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:28:22-74
+16
+17    <permission
+17-->[androidx.core:core:1.13.1] /Users/sarthak.sharma/.gradle/caches/transforms-4/cf0ed9b1b45ffa0c6e05cba89d8f99fb/transformed/core-1.13.1/AndroidManifest.xml:22:5-24:47
+18        android:name="com.example.movies24.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+18-->[androidx.core:core:1.13.1] /Users/sarthak.sharma/.gradle/caches/transforms-4/cf0ed9b1b45ffa0c6e05cba89d8f99fb/transformed/core-1.13.1/AndroidManifest.xml:23:9-81
+19        android:protectionLevel="signature" />
+19-->[androidx.core:core:1.13.1] /Users/sarthak.sharma/.gradle/caches/transforms-4/cf0ed9b1b45ffa0c6e05cba89d8f99fb/transformed/core-1.13.1/AndroidManifest.xml:24:9-44
+20
+21    <uses-permission android:name="com.example.movies24.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+21-->[androidx.core:core:1.13.1] /Users/sarthak.sharma/.gradle/caches/transforms-4/cf0ed9b1b45ffa0c6e05cba89d8f99fb/transformed/core-1.13.1/AndroidManifest.xml:26:5-97
+21-->[androidx.core:core:1.13.1] /Users/sarthak.sharma/.gradle/caches/transforms-4/cf0ed9b1b45ffa0c6e05cba89d8f99fb/transformed/core-1.13.1/AndroidManifest.xml:26:22-94
+22
+23    <application
+23-->/Users/sarthak.sharma/AndroidStudioProjects/Movies24/app/src/main/AndroidManifest.xml:6:5-29:19
+24        android:name="com.example.movies24.App"
+24-->/Users/sarthak.sharma/AndroidStudioProjects/Movies24/app/src/main/AndroidManifest.xml:7:9-28
+25        android:allowBackup="true"
+25-->/Users/sarthak.sharma/AndroidStudioProjects/Movies24/app/src/main/AndroidManifest.xml:8:9-35
+26        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+26-->[androidx.core:core:1.13.1] /Users/sarthak.sharma/.gradle/caches/transforms-4/cf0ed9b1b45ffa0c6e05cba89d8f99fb/transformed/core-1.13.1/AndroidManifest.xml:28:18-86
+27        android:dataExtractionRules="@xml/data_extraction_rules"
+27-->/Users/sarthak.sharma/AndroidStudioProjects/Movies24/app/src/main/AndroidManifest.xml:9:9-65
+28        android:debuggable="true"
+29        android:extractNativeLibs="false"
+30        android:fullBackupContent="@xml/backup_rules"
+30-->/Users/sarthak.sharma/AndroidStudioProjects/Movies24/app/src/main/AndroidManifest.xml:10:9-54
+31        android:icon="@mipmap/ic_launcher"
+31-->/Users/sarthak.sharma/AndroidStudioProjects/Movies24/app/src/main/AndroidManifest.xml:11:9-43
+32        android:label="@string/app_name"
+32-->/Users/sarthak.sharma/AndroidStudioProjects/Movies24/app/src/main/AndroidManifest.xml:12:9-41
+33        android:networkSecurityConfig="@xml/network_config"
+33-->/Users/sarthak.sharma/AndroidStudioProjects/Movies24/app/src/main/AndroidManifest.xml:15:9-60
+34        android:roundIcon="@mipmap/ic_launcher_round"
+34-->/Users/sarthak.sharma/AndroidStudioProjects/Movies24/app/src/main/AndroidManifest.xml:13:9-54
+35        android:supportsRtl="true"
+35-->/Users/sarthak.sharma/AndroidStudioProjects/Movies24/app/src/main/AndroidManifest.xml:14:9-35
+36        android:testOnly="true"
+37        android:theme="@style/Theme.Movies24" >
+37-->/Users/sarthak.sharma/AndroidStudioProjects/Movies24/app/src/main/AndroidManifest.xml:16:9-46
+38        <activity
+38-->/Users/sarthak.sharma/AndroidStudioProjects/Movies24/app/src/main/AndroidManifest.xml:18:9-28:20
+39            android:name="com.example.movies24.core.MainActivity"
+39-->/Users/sarthak.sharma/AndroidStudioProjects/Movies24/app/src/main/AndroidManifest.xml:19:13-46
+40            android:exported="true"
+40-->/Users/sarthak.sharma/AndroidStudioProjects/Movies24/app/src/main/AndroidManifest.xml:20:13-36
+41            android:label="@string/app_name"
+41-->/Users/sarthak.sharma/AndroidStudioProjects/Movies24/app/src/main/AndroidManifest.xml:21:13-45
+42            android:theme="@style/Theme.Movies24" >
+42-->/Users/sarthak.sharma/AndroidStudioProjects/Movies24/app/src/main/AndroidManifest.xml:22:13-50
+43            <intent-filter>
+43-->/Users/sarthak.sharma/AndroidStudioProjects/Movies24/app/src/main/AndroidManifest.xml:23:13-27:29
+44                <action android:name="android.intent.action.MAIN" />
+44-->/Users/sarthak.sharma/AndroidStudioProjects/Movies24/app/src/main/AndroidManifest.xml:24:17-69
+44-->/Users/sarthak.sharma/AndroidStudioProjects/Movies24/app/src/main/AndroidManifest.xml:24:25-66
+45
+46                <category android:name="android.intent.category.LAUNCHER" />
+46-->/Users/sarthak.sharma/AndroidStudioProjects/Movies24/app/src/main/AndroidManifest.xml:26:17-77
+46-->/Users/sarthak.sharma/AndroidStudioProjects/Movies24/app/src/main/AndroidManifest.xml:26:27-74
+47            </intent-filter>
+48        </activity>
+49
+50        <provider
+50-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:31:9-39:20
+51            android:name="androidx.startup.InitializationProvider"
+51-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:32:13-67
+52            android:authorities="com.example.movies24.androidx-startup"
+52-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:33:13-68
+53            android:exported="false" >
+53-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:34:13-37
+54            <meta-data
+54-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:36:13-38:52
+55                android:name="androidx.work.WorkManagerInitializer"
+55-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:37:17-68
+56                android:value="androidx.startup" />
+56-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:38:17-49
+57            <meta-data
+57-->[androidx.emoji2:emoji2:1.3.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3a9c484f957fb5aef890bab964c7530e/transformed/emoji2-1.3.0/AndroidManifest.xml:29:13-31:52
+58                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+58-->[androidx.emoji2:emoji2:1.3.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3a9c484f957fb5aef890bab964c7530e/transformed/emoji2-1.3.0/AndroidManifest.xml:30:17-75
+59                android:value="androidx.startup" />
+59-->[androidx.emoji2:emoji2:1.3.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3a9c484f957fb5aef890bab964c7530e/transformed/emoji2-1.3.0/AndroidManifest.xml:31:17-49
+60            <meta-data
+60-->[androidx.lifecycle:lifecycle-process:2.8.4] /Users/sarthak.sharma/.gradle/caches/transforms-4/28a8e4d469d4c3965d01e3b1ff63df5f/transformed/lifecycle-process-2.8.4/AndroidManifest.xml:29:13-31:52
+61                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+61-->[androidx.lifecycle:lifecycle-process:2.8.4] /Users/sarthak.sharma/.gradle/caches/transforms-4/28a8e4d469d4c3965d01e3b1ff63df5f/transformed/lifecycle-process-2.8.4/AndroidManifest.xml:30:17-78
+62                android:value="androidx.startup" />
+62-->[androidx.lifecycle:lifecycle-process:2.8.4] /Users/sarthak.sharma/.gradle/caches/transforms-4/28a8e4d469d4c3965d01e3b1ff63df5f/transformed/lifecycle-process-2.8.4/AndroidManifest.xml:31:17-49
+63            <meta-data
+63-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/sarthak.sharma/.gradle/caches/transforms-4/fff8c118cf9f228fd14c44216475773e/transformed/profileinstaller-1.3.1/AndroidManifest.xml:29:13-31:52
+64                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+64-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/sarthak.sharma/.gradle/caches/transforms-4/fff8c118cf9f228fd14c44216475773e/transformed/profileinstaller-1.3.1/AndroidManifest.xml:30:17-85
+65                android:value="androidx.startup" />
+65-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/sarthak.sharma/.gradle/caches/transforms-4/fff8c118cf9f228fd14c44216475773e/transformed/profileinstaller-1.3.1/AndroidManifest.xml:31:17-49
+66        </provider>
+67
+68        <service
+68-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:41:9-46:35
+69            android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"
+69-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:42:13-88
+70            android:directBootAware="false"
+70-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:43:13-44
+71            android:enabled="@bool/enable_system_alarm_service_default"
+71-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:44:13-72
+72            android:exported="false" />
+72-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:45:13-37
+73        <service
+73-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:47:9-53:35
+74            android:name="androidx.work.impl.background.systemjob.SystemJobService"
+74-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:48:13-84
+75            android:directBootAware="false"
+75-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:49:13-44
+76            android:enabled="@bool/enable_system_job_service_default"
+76-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:50:13-70
+77            android:exported="true"
+77-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:51:13-36
+78            android:permission="android.permission.BIND_JOB_SERVICE" />
+78-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:52:13-69
+79        <service
+79-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:54:9-59:35
+80            android:name="androidx.work.impl.foreground.SystemForegroundService"
+80-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:55:13-81
+81            android:directBootAware="false"
+81-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:56:13-44
+82            android:enabled="@bool/enable_system_foreground_service_default"
+82-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:57:13-77
+83            android:exported="false" />
+83-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:58:13-37
+84
+85        <receiver
+85-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:61:9-66:35
+86            android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver"
+86-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:62:13-88
+87            android:directBootAware="false"
+87-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:63:13-44
+88            android:enabled="true"
+88-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:64:13-35
+89            android:exported="false" />
+89-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:65:13-37
+90        <receiver
+90-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:67:9-77:20
+91            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy"
+91-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:68:13-106
+92            android:directBootAware="false"
+92-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:69:13-44
+93            android:enabled="false"
+93-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:70:13-36
+94            android:exported="false" >
+94-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:71:13-37
+95            <intent-filter>
+95-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:73:13-76:29
+96                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+96-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:74:17-87
+96-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:74:25-84
+97                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+97-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:75:17-90
+97-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:75:25-87
+98            </intent-filter>
+99        </receiver>
+100        <receiver
+100-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:78:9-88:20
+101            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy"
+101-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:79:13-104
+102            android:directBootAware="false"
+102-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:80:13-44
+103            android:enabled="false"
+103-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:81:13-36
+104            android:exported="false" >
+104-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:82:13-37
+105            <intent-filter>
+105-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:84:13-87:29
+106                <action android:name="android.intent.action.BATTERY_OKAY" />
+106-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:85:17-77
+106-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:85:25-74
+107                <action android:name="android.intent.action.BATTERY_LOW" />
+107-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:86:17-76
+107-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:86:25-73
+108            </intent-filter>
+109        </receiver>
+110        <receiver
+110-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:89:9-99:20
+111            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy"
+111-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:90:13-104
+112            android:directBootAware="false"
+112-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:91:13-44
+113            android:enabled="false"
+113-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:92:13-36
+114            android:exported="false" >
+114-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:93:13-37
+115            <intent-filter>
+115-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:95:13-98:29
+116                <action android:name="android.intent.action.DEVICE_STORAGE_LOW" />
+116-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:96:17-83
+116-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:96:25-80
+117                <action android:name="android.intent.action.DEVICE_STORAGE_OK" />
+117-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:97:17-82
+117-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:97:25-79
+118            </intent-filter>
+119        </receiver>
+120        <receiver
+120-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:100:9-109:20
+121            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy"
+121-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:101:13-103
+122            android:directBootAware="false"
+122-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:102:13-44
+123            android:enabled="false"
+123-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:103:13-36
+124            android:exported="false" >
+124-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:104:13-37
+125            <intent-filter>
+125-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:106:13-108:29
+126                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+126-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:107:17-79
+126-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:107:25-76
+127            </intent-filter>
+128        </receiver>
+129        <receiver
+129-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:110:9-121:20
+130            android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver"
+130-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:111:13-88
+131            android:directBootAware="false"
+131-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:112:13-44
+132            android:enabled="false"
+132-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:113:13-36
+133            android:exported="false" >
+133-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:114:13-37
+134            <intent-filter>
+134-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:116:13-120:29
+135                <action android:name="android.intent.action.BOOT_COMPLETED" />
+135-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:117:17-79
+135-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:117:25-76
+136                <action android:name="android.intent.action.TIME_SET" />
+136-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:118:17-73
+136-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:118:25-70
+137                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+137-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:119:17-81
+137-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:119:25-78
+138            </intent-filter>
+139        </receiver>
+140        <receiver
+140-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:122:9-131:20
+141            android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver"
+141-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:123:13-99
+142            android:directBootAware="false"
+142-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:124:13-44
+143            android:enabled="@bool/enable_system_alarm_service_default"
+143-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:125:13-72
+144            android:exported="false" >
+144-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:126:13-37
+145            <intent-filter>
+145-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:128:13-130:29
+146                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies" />
+146-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:129:17-98
+146-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:129:25-95
+147            </intent-filter>
+148        </receiver>
+149        <receiver
+149-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:132:9-142:20
+150            android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver"
+150-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:133:13-78
+151            android:directBootAware="false"
+151-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:134:13-44
+152            android:enabled="true"
+152-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:135:13-35
+153            android:exported="true"
+153-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:136:13-36
+154            android:permission="android.permission.DUMP" >
+154-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:137:13-57
+155            <intent-filter>
+155-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:139:13-141:29
+156                <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS" />
+156-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:140:17-88
+156-->[androidx.work:work-runtime:2.7.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/3083b07a66dfe5792b2dbb9b3d1a24c3/transformed/work-runtime-2.7.0/AndroidManifest.xml:140:25-85
+157            </intent-filter>
+158        </receiver>
+159
+160        <service
+160-->[androidx.room:room-runtime:2.6.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/4349dcdd5127c3760200790fa6e842a9/transformed/room-runtime-2.6.0/AndroidManifest.xml:24:9-28:63
+161            android:name="androidx.room.MultiInstanceInvalidationService"
+161-->[androidx.room:room-runtime:2.6.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/4349dcdd5127c3760200790fa6e842a9/transformed/room-runtime-2.6.0/AndroidManifest.xml:25:13-74
+162            android:directBootAware="true"
+162-->[androidx.room:room-runtime:2.6.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/4349dcdd5127c3760200790fa6e842a9/transformed/room-runtime-2.6.0/AndroidManifest.xml:26:13-43
+163            android:exported="false" />
+163-->[androidx.room:room-runtime:2.6.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/4349dcdd5127c3760200790fa6e842a9/transformed/room-runtime-2.6.0/AndroidManifest.xml:27:13-37
+164
+165        <activity
+165-->[androidx.compose.ui:ui-test-manifest:1.6.8] /Users/sarthak.sharma/.gradle/caches/transforms-4/dbcafb26c88ed9f43b6a8a7b16dfb1a5/transformed/ui-test-manifest-1.6.8/AndroidManifest.xml:23:9-25:39
+166            android:name="androidx.activity.ComponentActivity"
+166-->[androidx.compose.ui:ui-test-manifest:1.6.8] /Users/sarthak.sharma/.gradle/caches/transforms-4/dbcafb26c88ed9f43b6a8a7b16dfb1a5/transformed/ui-test-manifest-1.6.8/AndroidManifest.xml:24:13-63
+167            android:exported="true" />
+167-->[androidx.compose.ui:ui-test-manifest:1.6.8] /Users/sarthak.sharma/.gradle/caches/transforms-4/dbcafb26c88ed9f43b6a8a7b16dfb1a5/transformed/ui-test-manifest-1.6.8/AndroidManifest.xml:25:13-36
+168        <activity
+168-->[androidx.compose.ui:ui-tooling-android:1.6.8] /Users/sarthak.sharma/.gradle/caches/transforms-4/bae8562995b9553d1c1d022eaf6ab83f/transformed/ui-tooling-release/AndroidManifest.xml:23:9-25:39
+169            android:name="androidx.compose.ui.tooling.PreviewActivity"
+169-->[androidx.compose.ui:ui-tooling-android:1.6.8] /Users/sarthak.sharma/.gradle/caches/transforms-4/bae8562995b9553d1c1d022eaf6ab83f/transformed/ui-tooling-release/AndroidManifest.xml:24:13-71
+170            android:exported="true" />
+170-->[androidx.compose.ui:ui-tooling-android:1.6.8] /Users/sarthak.sharma/.gradle/caches/transforms-4/bae8562995b9553d1c1d022eaf6ab83f/transformed/ui-tooling-release/AndroidManifest.xml:25:13-36
+171
+172        <uses-library
+172-->[androidx.window:window:1.0.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/0d7550ede9f2393da1133eb0aa234a2b/transformed/window-1.0.0/AndroidManifest.xml:25:9-27:40
+173            android:name="androidx.window.extensions"
+173-->[androidx.window:window:1.0.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/0d7550ede9f2393da1133eb0aa234a2b/transformed/window-1.0.0/AndroidManifest.xml:26:13-54
+174            android:required="false" />
+174-->[androidx.window:window:1.0.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/0d7550ede9f2393da1133eb0aa234a2b/transformed/window-1.0.0/AndroidManifest.xml:27:13-37
+175        <uses-library
+175-->[androidx.window:window:1.0.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/0d7550ede9f2393da1133eb0aa234a2b/transformed/window-1.0.0/AndroidManifest.xml:28:9-30:40
+176            android:name="androidx.window.sidecar"
+176-->[androidx.window:window:1.0.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/0d7550ede9f2393da1133eb0aa234a2b/transformed/window-1.0.0/AndroidManifest.xml:29:13-51
+177            android:required="false" />
+177-->[androidx.window:window:1.0.0] /Users/sarthak.sharma/.gradle/caches/transforms-4/0d7550ede9f2393da1133eb0aa234a2b/transformed/window-1.0.0/AndroidManifest.xml:30:13-37
+178
+179        <receiver
+179-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/sarthak.sharma/.gradle/caches/transforms-4/fff8c118cf9f228fd14c44216475773e/transformed/profileinstaller-1.3.1/AndroidManifest.xml:34:9-52:20
+180            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+180-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/sarthak.sharma/.gradle/caches/transforms-4/fff8c118cf9f228fd14c44216475773e/transformed/profileinstaller-1.3.1/AndroidManifest.xml:35:13-76
+181            android:directBootAware="false"
+181-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/sarthak.sharma/.gradle/caches/transforms-4/fff8c118cf9f228fd14c44216475773e/transformed/profileinstaller-1.3.1/AndroidManifest.xml:36:13-44
+182            android:enabled="true"
+182-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/sarthak.sharma/.gradle/caches/transforms-4/fff8c118cf9f228fd14c44216475773e/transformed/profileinstaller-1.3.1/AndroidManifest.xml:37:13-35
+183            android:exported="true"
+183-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/sarthak.sharma/.gradle/caches/transforms-4/fff8c118cf9f228fd14c44216475773e/transformed/profileinstaller-1.3.1/AndroidManifest.xml:38:13-36
+184            android:permission="android.permission.DUMP" >
+184-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/sarthak.sharma/.gradle/caches/transforms-4/fff8c118cf9f228fd14c44216475773e/transformed/profileinstaller-1.3.1/AndroidManifest.xml:39:13-57
+185            <intent-filter>
+185-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/sarthak.sharma/.gradle/caches/transforms-4/fff8c118cf9f228fd14c44216475773e/transformed/profileinstaller-1.3.1/AndroidManifest.xml:40:13-42:29
+186                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+186-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/sarthak.sharma/.gradle/caches/transforms-4/fff8c118cf9f228fd14c44216475773e/transformed/profileinstaller-1.3.1/AndroidManifest.xml:41:17-91
+186-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/sarthak.sharma/.gradle/caches/transforms-4/fff8c118cf9f228fd14c44216475773e/transformed/profileinstaller-1.3.1/AndroidManifest.xml:41:25-88
+187            </intent-filter>
+188            <intent-filter>
+188-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/sarthak.sharma/.gradle/caches/transforms-4/fff8c118cf9f228fd14c44216475773e/transformed/profileinstaller-1.3.1/AndroidManifest.xml:43:13-45:29
+189                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+189-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/sarthak.sharma/.gradle/caches/transforms-4/fff8c118cf9f228fd14c44216475773e/transformed/profileinstaller-1.3.1/AndroidManifest.xml:44:17-85
+189-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/sarthak.sharma/.gradle/caches/transforms-4/fff8c118cf9f228fd14c44216475773e/transformed/profileinstaller-1.3.1/AndroidManifest.xml:44:25-82
+190            </intent-filter>
+191            <intent-filter>
+191-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/sarthak.sharma/.gradle/caches/transforms-4/fff8c118cf9f228fd14c44216475773e/transformed/profileinstaller-1.3.1/AndroidManifest.xml:46:13-48:29
+192                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+192-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/sarthak.sharma/.gradle/caches/transforms-4/fff8c118cf9f228fd14c44216475773e/transformed/profileinstaller-1.3.1/AndroidManifest.xml:47:17-88
+192-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/sarthak.sharma/.gradle/caches/transforms-4/fff8c118cf9f228fd14c44216475773e/transformed/profileinstaller-1.3.1/AndroidManifest.xml:47:25-85
+193            </intent-filter>
+194            <intent-filter>
+194-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/sarthak.sharma/.gradle/caches/transforms-4/fff8c118cf9f228fd14c44216475773e/transformed/profileinstaller-1.3.1/AndroidManifest.xml:49:13-51:29
+195                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+195-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/sarthak.sharma/.gradle/caches/transforms-4/fff8c118cf9f228fd14c44216475773e/transformed/profileinstaller-1.3.1/AndroidManifest.xml:50:17-95
+195-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/sarthak.sharma/.gradle/caches/transforms-4/fff8c118cf9f228fd14c44216475773e/transformed/profileinstaller-1.3.1/AndroidManifest.xml:50:25-92
+196            </intent-filter>
+197        </receiver>
+198    </application>
+199
+200</manifest>
