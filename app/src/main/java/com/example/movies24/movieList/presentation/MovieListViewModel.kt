@@ -3,6 +3,7 @@ package com.example.movies24.movieList.presentation
 import androidx.compose.runtime.collectAsState
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import androidx.navigation.NavController
 import com.example.movies24.movieList.data.remote.MovieApi
 import com.example.movies24.movieList.domain.repository.MovieListRepository
 import com.example.movies24.movieList.util.Category
@@ -16,10 +17,14 @@ import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 import com.example.movies24.movieList.data.movie.MovieDao
+import com.example.movies24.movieList.data.movie.MovieDatabase
+import kotlinx.coroutines.time.delay
+
 @HiltViewModel
 class MovieListViewModel @Inject constructor(
     private val movieListRepository : MovieListRepository,
-    private val movieApi: MovieApi
+    private val movieApi: MovieApi,
+    val movieDb:MovieDatabase
 ) : ViewModel(){
     private var _movieListState= MutableStateFlow(MovieListState())
     val movieListState= _movieListState.asStateFlow()
@@ -34,14 +39,19 @@ class MovieListViewModel @Inject constructor(
     }
     fun refreshTopRatedMovie(){
         viewModelScope.launch{
+            movieDb.movieDao.dataGoesPoof()
             _isRefreshing.value=true
+
             getTop_RatedMovieList(forceFetchFromRemote = true)
             _isRefreshing.value=false
         }
     }
     fun refreshUpcomingMovie(){
+        var navi:NavController
         viewModelScope.launch{
             _isRefreshing.value=true
+            kotlinx.coroutines.delay(100L)
+                // navi.navigate()
             getUpcomingMoviesList(forceFetchFromRemote = true)
             _isRefreshing.value=false
         }

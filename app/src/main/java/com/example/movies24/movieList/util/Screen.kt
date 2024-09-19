@@ -5,4 +5,5 @@ sealed class Screen(val rout: String) {
     object Top_RatedMovieList : Screen("top_ratedMovie")
     object UpcomingMoviesList : Screen("upcomingMovie")
     object Details:Screen("details")
+    object Splash
 }
