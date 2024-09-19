@@ -74,6 +74,8 @@ class MovieListViewModel @Inject constructor(
                     getUpcomingMoviesList(true)
                 }
             }
+
+            else -> {}
         }
     }
     private fun getTop_RatedMovieList(forceFetchFromRemote: Boolean){
@@ -153,6 +155,8 @@ class MovieListViewModel @Inject constructor(
                             it.copy(isLoading=result.isLoading)
                         }
                     }
+
+                    else -> {}
                 }
             }
         }
