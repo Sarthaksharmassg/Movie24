@@ -67,8 +67,8 @@ import com.example.movies24.movieList.util.Screen
 fun HomeScreen(navController: NavController){
     val movieListViewModel= hiltViewModel<MovieListViewModel>()
     val movieListState=movieListViewModel.movieListState.collectAsState().value
-    val refreshing by movieListViewModel.isRefrshing.collectAsStateWithLifecycle()
-    val pullRefreshState = rememberPullRefreshState(refreshing,{movieListViewModel.refreshpull()})
+    val isRefreshing=movieListViewModel.isRefreshing.collectAsState().value
+
 
     val bottommNavController= rememberNavController()    //why?? todo to know 0k
 
@@ -102,7 +102,10 @@ fun HomeScreen(navController: NavController){
                composable(Screen.Top_RatedMovieList.rout){
                     Top_RatedMoviesScreen(
                         navController = navController,
-                        movieListState = movieListState, onEvent = movieListViewModel::onEvent)
+                        movieListState = movieListState,
+                        onEvent = movieListViewModel::onEvent,
+                        isRefreshing=isRefreshing,
+                        onRefresh = {movieListViewModel.refreshTopRatedMovie()})
                }
                composable(Screen.UpcomingMoviesList.rout){
                    UpcomingMoviesScreen(
@@ -121,7 +124,7 @@ fun BottomNaviBar(
     val items= listOf(
     BottomItem(title="Top-Rated",icon= Icons.Rounded.MovieFilter), BottomItem(title="Upcoming",icon= Icons.Rounded.Upcoming)
     )
-    val selected= rememberSaveable() {    //if rotat screen, can also use remember burt will be reininitialised to 0 on screen roatation
+    val selected= rememberSaveable() {    //if rotat screen, can also use remember burt will be reininitialised to 0 on screen roatation,
         mutableIntStateOf(0)
     }
     NavigationBar {

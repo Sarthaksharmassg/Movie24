@@ -9,6 +9,8 @@ import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.pullrefresh.PullRefreshIndicator
+import androidx.compose.material.pullrefresh.pullRefresh
+import androidx.compose.material.pullrefresh.rememberPullRefreshState
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -23,29 +25,40 @@ import com.example.movies24.movieList.util.Category
 fun Top_RatedMoviesScreen(
     movieListState: MovieListState,
     navController: NavController,
-    onEvent:(MovieListUIEvent)->Unit
-
+    onEvent:(MovieListUIEvent)->Unit,
+    isRefreshing:Boolean,
+    onRefresh:()->Unit
 ){
+    val  pullRefreshState= rememberPullRefreshState(refreshing = isRefreshing, onRefresh = onRefresh)
     if(movieListState.top_RatedMovieList.isEmpty()){
        Box(modifier=Modifier.fillMaxSize(), contentAlignment = Alignment.Center){
            CircularProgressIndicator()
        }
     }
     else{
-        LazyVerticalGrid(columns = GridCells.Fixed(2),
-            modifier=Modifier.fillMaxSize(),
-            contentPadding = PaddingValues(vertical = 8.dp, horizontal = 4.dp)
-        ) {
-            items(movieListState.top_RatedMovieList.size){index->
-                MovieItem(movie = movieListState.top_RatedMovieList[index], navHostController =navController)
-                Spacer(modifier=Modifier.height(16.dp))
-                if((index>=movieListState.top_RatedMovieList.size-1)&& !movieListState.isLoading){
-                    onEvent(MovieListUIEvent.Paginate(Category.TOP_RATED))
+        Box(modifier = Modifier
+            .fillMaxSize()
+            .pullRefresh(pullRefreshState)) {
+            LazyVerticalGrid(
+                columns = GridCells.Fixed(2),
+                modifier = Modifier.fillMaxSize(),
+                contentPadding = PaddingValues(vertical = 8.dp, horizontal = 4.dp)
+            ) {
+                items(movieListState.top_RatedMovieList.size) { index ->
+                    MovieItem(
+                        movie = movieListState.top_RatedMovieList[index],
+                        navHostController = navController
+                    )
+                    Spacer(modifier = Modifier.height(16.dp))
+                    if ((index >= movieListState.top_RatedMovieList.size - 1) && !movieListState.isLoading) {
+                        onEvent(MovieListUIEvent.Paginate(Category.TOP_RATED))
+                    }
                 }
             }
+            //PullRefreshIndicator(refreshing = isRefrshing, state = )
+            //TODO pullre freshIndicator()
+            //todo
+            PullRefreshIndicator(refreshing = isRefreshing, state = pullRefreshState,Modifier.align(Alignment.TopCenter))
         }
-        //PullRefreshIndicator(refreshing = isRefrshing, state = )
-        //TODO pullre freshIndicator()
-        //todo
     }
 }

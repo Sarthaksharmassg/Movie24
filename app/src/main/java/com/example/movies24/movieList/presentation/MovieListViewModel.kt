@@ -24,11 +24,27 @@ class MovieListViewModel @Inject constructor(
     private var _movieListState= MutableStateFlow(MovieListState())
     val movieListState= _movieListState.asStateFlow()
 
+    private var _isRefreshing= MutableStateFlow(false)
+    val isRefreshing=_isRefreshing.asStateFlow()
 
     init{
-        refreshpull()
+        //refreshpull()
         getTop_RatedMovieList(false)
         getUpcomingMoviesList(false)
+    }
+    fun refreshTopRatedMovie(){
+        viewModelScope.launch{
+            _isRefreshing.value=true
+            getTop_RatedMovieList(forceFetchFromRemote = true)
+            _isRefreshing.value=false
+        }
+    }
+    fun refreshUpcomingMovie(){
+        viewModelScope.launch{
+            _isRefreshing.value=true
+            getUpcomingMoviesList(forceFetchFromRemote = true)
+            _isRefreshing.value=false
+        }
     }
 
     fun onEvent(event:MovieListUIEvent){
@@ -141,47 +157,47 @@ class MovieListViewModel @Inject constructor(
 
     }
 
-    private val _isRefreshing= MutableStateFlow(false)
-    val isRefrshing:StateFlow<Boolean>
-        get()=_isRefreshing.asStateFlow()
-
-    fun refreshpull(){
-        viewModelScope.launch{
-        //var forcefetch: Boolean= true;
-            movieListRepository.getMovieListIsInRepo(
-                true,
-                Category.UPCOMING,
-                movieListState.value.upcomingMovieListPage
-            ).collectLatest {
-                    result->
-                when(result){
-                    is Resource.Error ->{
-                        _movieListState.update{
-                            it.copy(isLoading=false)
-                        }
-                    }
-
-                    is Resource.Success ->{
-                        result.data?.let{ upcomingList->
-                            _movieListState.update{
-                                it.copy(
-                                    upcomingMovieList =upcomingList.shuffled(),
-                                    upcomingMovieListPage =1
-                                )
-                            }
-
-                        }
-                    }
-                    is Resource.Loading ->{
-                        _movieListState.update{
-                            it.copy(isLoading=result.isLoading)
-                        }
-                    }
-                }
-            }
-            _isRefreshing.emit(false)
-        }
-    }
+//    private val _isRefreshing= MutableStateFlow(false)
+//    val isRefrshing:StateFlow<Boolean>
+//        get()=_isRefreshing.asStateFlow()
+//
+//    fun refreshpull(){
+//        viewModelScope.launch{
+//        //var forcefetch: Boolean= true;
+//            movieListRepository.getMovieListIsInRepo(
+//                true,
+//                Category.UPCOMING,
+//                movieListState.value.upcomingMovieListPage
+//            ).collectLatest {
+//                    result->
+//                when(result){
+//                    is Resource.Error ->{
+//                        _movieListState.update{
+//                            it.copy(isLoading=false)
+//                        }
+//                    }
+//
+//                    is Resource.Success ->{
+//                        result.data?.let{ upcomingList->
+//                            _movieListState.update{
+//                                it.copy(
+//                                    upcomingMovieList =upcomingList.shuffled(),
+//                                    upcomingMovieListPage =1
+//                                )
+//                            }
+//
+//                        }
+//                    }
+//                    is Resource.Loading ->{
+//                        _movieListState.update{
+//                            it.copy(isLoading=result.isLoading)
+//                        }
+//                    }
+//                }
+//            }
+//            _isRefreshing.emit(false)
+//        }
+//    }
 
 }
 
